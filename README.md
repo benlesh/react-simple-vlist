@@ -40,7 +40,7 @@ function BasicUsage() {
 
 ## a11y
 
-Because the aim of this component is to handle only what is necessary to virtualize a list vertically in terms of DOM-manipulation, this component does _nothing_ on its own to setup ARIA attributes or roles. However, it does expose to properties that allow custom properties to be set on the scrollable container and the individual item containers (for visible items). Those properties are `containerProps` and `itemProps`, respectively.
+Because the aim of this component is to handle only what is necessary to virtualize a list vertically in terms of DOM-manipulation, this component does _nothing_ on its own to setup ARIA attributes or roles. However, it does expose two properties that allow custom properties to be set on the scrollable container and the individual item containers (for visible items). Those properties are `containerProps` and `itemProps`, respectively.
 
 For example, dealing with a virtualized list of articles you may do the following:
 
