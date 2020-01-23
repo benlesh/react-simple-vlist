@@ -1,4 +1,4 @@
-# react-simple-list
+# react-simple-vlist
 
 [MIT Licensed](/LICENSE.txt)
 
