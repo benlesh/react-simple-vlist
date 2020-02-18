@@ -1,6 +1,7 @@
 {
   "name": "react-simple-vlist",
   "version": "0.0.0",
+  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/react-simple-vlist.esm.js",
   "typings": "dist/index.d.ts",
