@@ -62,7 +62,6 @@ describe('VList', () => {
       '1: Item 1',
       '2: Item 2',
       '3: Item 3',
-      '4: Item 4',
     ]);
   });
 
@@ -102,7 +101,6 @@ describe('VList', () => {
       '17: Item 17',
       '18: Item 18',
       '19: Item 19',
-      '20: Item 20',
     ]);
 
     // Scroll up to 400 from 800
@@ -114,7 +112,6 @@ describe('VList', () => {
       '9: Item 9',
       '10: Item 10',
       '11: Item 11',
-      '12: Item 12',
     ]);
   });
 
@@ -153,7 +150,6 @@ describe('VList', () => {
       '17: Item 17',
       '18: Item 18',
       '19: Item 19',
-      '20: Item 20',
     ]);
   });
 
