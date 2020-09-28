@@ -115,7 +115,9 @@ export default function VList<T>(props: VListProps<T>) {
     }
   }, [itemHeight, startIndex]);
 
-  const displayCount = Math.ceil(height / itemHeight);
+  // We're adding one here because at certain zoom levels, the math is
+  // *just* right, that we can sometimes be missing the last item in the list.
+  const displayCount = Math.ceil(height / itemHeight) + 1;
   const displayHeight = displayCount * itemHeight;
   const contentHeight = items.length * itemHeight;
   const containerHeight = Math.min(contentHeight, displayHeight);
