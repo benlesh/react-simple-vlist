@@ -1,5 +1,5 @@
 /**
- * Copyright 2019 Ben Lesh <ben@benlesh.com>
+ * Copyright 2020 Ben Lesh <ben@benlesh.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
  * documentation files (the "Software"), to deal in the Software without restriction, including without
@@ -17,7 +17,7 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import React, { useRef, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 
 interface VListScrollEvent {
   /**
@@ -122,7 +122,7 @@ export default function VList<T>(props: VListProps<T>) {
   const contentHeight = items.length * itemHeight;
   const containerHeight = Math.min(contentHeight, displayHeight);
 
-  const onContainerScroll = () => {
+  const onContainerScroll = useCallback(() => {
     const scrollTop = containerRef.current!.scrollTop;
     const startIndex = Math.round(scrollTop / itemHeight);
     setVisibleStartIndex(startIndex);
@@ -130,7 +130,7 @@ export default function VList<T>(props: VListProps<T>) {
       onScroll({
         startIndex,
       });
-  };
+  }, [itemHeight, onScroll]);
 
   const containerStyle = {
     overflow: 'auto',
